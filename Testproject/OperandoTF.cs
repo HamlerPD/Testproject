@@ -30,9 +30,20 @@ namespace Testproject
             Console.WriteLine(1 >= 1);
             Console.WriteLine(1 <= 1);*/
 
-            String pangram = "The quick brown fox jumps over the lazy dog.";
-            Console.WriteLine(pangram.Contains("fox"));
-            Console.WriteLine(pangram.Contains("cow"));
+            /*String pangram = "The quick brown fox jumps over the lazy dog.";
+            Console.WriteLine(pangram.Contains("fox")==false);
+            Console.WriteLine(!pangram.Contains("cow"));*/
+
+            int a = 7;
+            int b = 6;
+            Console.WriteLine(a != b); //True
+
+            String S1 = "Hello";
+            String S2 = "Hello";
+
+            Console.WriteLine(S1 != S2);//False
+
+
 
 
         }
