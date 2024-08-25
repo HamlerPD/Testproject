@@ -8,14 +8,31 @@ namespace Testproject
 {
     public class OperandoTF
     {
+       
+       
         public OperandoTF() 
         {
-            Console.WriteLine("a" == "a");
-            Console.WriteLine("a" == "A");
-            Console.WriteLine(1 == 2);
+            //Esta linea de codigo elimina espacios en la cadena y compruba igualdad de 2 valores.
+            /*String value1 = "a";
+            String value2 = "A";
 
-            String MyValue = "a";
-            Console.WriteLine(MyValue == "a");
+            Console.WriteLine(value1.Trim().ToLower() == value2.Trim().ToLower());*/
+
+            /*Console.WriteLine("a" != "a");
+            Console.WriteLine("a" != "A");
+            Console.WriteLine(1 != 2);
+
+            String myValue = "a";
+            Console.WriteLine(myValue != "a");*/
+
+            /*Console.WriteLine(1 > 2);
+            Console.WriteLine(1 < 2);
+            Console.WriteLine(1 >= 1);
+            Console.WriteLine(1 <= 1);*/
+
+            String pangram = "The quick brown fox jumps over the lazy dog.";
+            Console.WriteLine(pangram.Contains("fox"));
+            Console.WriteLine(pangram.Contains("cow"));
 
 
         }
