@@ -8,9 +8,9 @@ namespace Testproject
 {
     public class OperandoTF
     {
-       
-       
-        public OperandoTF() 
+
+
+        public OperandoTF()
         {
             //Esta linea de codigo elimina espacios en la cadena y compruba igualdad de 2 valores.
             /*String value1 = "a";
@@ -34,18 +34,34 @@ namespace Testproject
             Console.WriteLine(pangram.Contains("fox")==false);
             Console.WriteLine(!pangram.Contains("cow"));*/
 
-            int a = 7;
+            /*int a = 7;
             int b = 6;
             Console.WriteLine(a != b); //True
 
             String S1 = "Hello";
             String S2 = "Hello";
 
-            Console.WriteLine(S1 != S2);//False
+            Console.WriteLine(S1 != S2);//False*/
+
+            Random dice = new Random();
+
+            int roll1 = dice.Next(1, 100);
 
 
+            if (roll1 >= 50)
+            {
+                Console.WriteLine("Head");
 
 
-        }
+            }else
+            {
+                Console.WriteLine("Tails");
+            }
+
+            Random coin = new Random();
+            int flip = coin.Next(0, 2);
+            Console.WriteLine((flip == 0) ? "heads" : "tails");
+
+        }    
     }
 }
