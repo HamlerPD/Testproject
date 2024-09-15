@@ -263,6 +263,7 @@ namespace Testproject
                     break;
             }
 
+
             Console.WriteLine($"Product: {size} {color} {type}");
 
 
