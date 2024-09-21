@@ -316,6 +316,19 @@ namespace Testproject
             {
                 Console.WriteLine(name);
             }*/
+            for (int i = 0; i <= 100; i++)
+            {
+                if(i / 3 == 3)
+                {
+                    Console.WriteLine($"{i}fizz");
+                }else if(i / 5 == 3)
+                {
+                    Console.WriteLine($"{i} Buzz");
+                }
+                
+            }
+
+
 
 
 
