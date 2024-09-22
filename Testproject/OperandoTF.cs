@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
@@ -316,17 +317,73 @@ namespace Testproject
             {
                 Console.WriteLine(name);
             }*/
-            for (int i = 0; i <= 100; i++)
+            /*for (int i = 0; i <= 100; i++)
             {
-                if(i / 3 == 3)
+                if ((i % 3 == 0) && (i % 5 == 0))
                 {
-                    Console.WriteLine($"{i}fizz");
-                }else if(i / 5 == 3)
+                    Console.WriteLine($"{i}FizzBuzz");
+                }
+                else if (i % 5 == 0)
                 {
                     Console.WriteLine($"{i} Buzz");
                 }
-                
-            }
+                else if (i % 3 == 0)
+                {
+                    Console.WriteLine($"{i} Fizz");
+
+                }else
+                {
+                    Console.WriteLine($"{i}");
+                }
+
+            }*/
+
+            /*Random random = new Random();
+            int current = random.Next(1, 11);
+            /*int current = 0;
+
+            do
+            {
+                current = random.Next(1, 11);
+                Console.WriteLine(current);
+            } while (current != 7);*/
+
+            /* while (current >= 3)
+             {
+                 Console.WriteLine(current);
+                 current = random.Next(1, 11);
+
+             }
+             Console.WriteLine($"The last number: { current}");*/
+
+            /*do
+            {
+                current = random.Next(1, 11);
+
+                if (current >= 8) continue;
+                Console.WriteLine(current);
+            } while (current != 7);*/
+
+            int Monster = 10;
+            int Hero = 10;
+
+            Random dice = new Random();
+            do
+            {
+                int roll = dice.Next(1, 11);
+                Monster -= roll;
+                Console.WriteLine($"The monster was damage and lost {roll} health and now has {Monster} health ");
+
+                if (Monster <= 0) continue;
+
+                roll = dice.Next(1, 11);
+                Hero -= roll;
+                Console.WriteLine($"The hero was damage and lost {roll} health and now has {Hero} health ");
+
+            } while (Monster > 0 && Hero > 0);
+            Console.WriteLine(Hero > Monster ? "Hero wins" : "Monster wins");
+
+
 
 
 
