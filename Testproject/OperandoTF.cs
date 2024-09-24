@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
@@ -364,7 +365,7 @@ namespace Testproject
                 Console.WriteLine(current);
             } while (current != 7);*/
 
-            int Monster = 10;
+            /*int Monster = 10;
             int Hero = 10;
 
             Random dice = new Random();
@@ -381,7 +382,56 @@ namespace Testproject
                 Console.WriteLine($"The hero was damage and lost {roll} health and now has {Hero} health ");
 
             } while (Monster > 0 && Hero > 0);
-            Console.WriteLine(Hero > Monster ? "Hero wins" : "Monster wins");
+            Console.WriteLine(Hero > Monster ? "Hero wins" : "Monster wins");*/
+
+            /*string? readResult;
+            bool validityEntry = false;
+            Console.WriteLine("Enter a string containing at least three characters: ");
+            do
+            {
+                readResult = Console.ReadLine();
+
+                if (readResult != null)
+                {
+                    if (readResult.Length == 3)
+                    {
+                        validityEntry = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Your imput is invalid, please try again.");
+                    }
+                }
+
+            } while (validityEntry == false);*/
+
+            // capture user input in a string variable named readResult*/
+
+            string? readResult;
+            int numericValue = 0;
+            bool validNumber = false;
+            Console.WriteLine("Enter a number at least 3 three figures:");
+            do
+            {
+                readResult = Console.ReadLine();
+                validNumber = int.TryParse(readResult, out numericValue);
+
+                if (readResult != null)
+                {
+                    if (readResult.Length >= 3)
+                    {
+                        validNumber = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Your input is invalid, please try again.");
+                    }
+                }
+            } while (validNumber == false);
+
+
+
+
 
 
 
