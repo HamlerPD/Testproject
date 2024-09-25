@@ -407,27 +407,48 @@ namespace Testproject
 
             // capture user input in a string variable named readResult*/
 
-            string? readResult;
-            int numericValue = 0;
+
+            /*int number1 = 0;
             bool validNumber = false;
-            Console.WriteLine("Enter a number at least 3 three figures:");
+            Console.WriteLine("Enter a number an integer number between 5 and 10:");
+            do
+            {
+
+                number1 = Convert.ToInt32(Console.ReadLine());
+
+                if ((number1 >= 5) && ( number1<= 10))
+                {
+                    validNumber = true;
+                    Console.WriteLine($"Your input value {number1} has been accepted.");
+                    
+                }
+                else
+                {
+                    Console.WriteLine("Your imput is invalid, please try again.");
+                }
+            } while (validNumber == false);*/
+
+            string? readResult;
+            bool validityEntry = false;
+
+            Console.WriteLine("Enter your role name (Administrator, Manager, or User): ");
             do
             {
                 readResult = Console.ReadLine();
-                validNumber = int.TryParse(readResult, out numericValue);
 
                 if (readResult != null)
                 {
-                    if (readResult.Length >= 3)
+                    if (readResult.Length == 3)
                     {
-                        validNumber = true;
+                        validityEntry = true;
                     }
                     else
                     {
-                        Console.WriteLine("Your input is invalid, please try again.");
+                        Console.WriteLine("Your imput is invalid, please try again.");
                     }
                 }
-            } while (validNumber == false);
+
+            } while (validityEntry == false);
 
 
 
