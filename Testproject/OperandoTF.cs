@@ -436,30 +436,30 @@ namespace Testproject
             {
                 readResult = Console.ReadLine();
 
-                if (readResult != null)
+                if (readResult == "Administrator")
                 {
-                    if (readResult.Length == 3)
-                    {
-                        validityEntry = true;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Your imput is invalid, please try again.");
-                    }
+                    validityEntry = true;
+                    Console.WriteLine($" Your input value {readResult.ToLower()} {readResult.Trim()} has been accepted.");
+                }
+                else if (readResult == "User")
+                {
+                    validityEntry = true;
+                    Console.WriteLine($" Your input value {readResult.ToLower()} {readResult.Trim()}has been accepted.");
+                }
+                else if (readResult == "Manager")
+                {
+                    validityEntry = true;
+                    Console.WriteLine($" Your input value {readResult.ToLower()} {readResult.Trim()}has been accepted.");
+                }
+                else
+                {
+                    Console.WriteLine($"The role name that you entered,{readResult} is not valid.");
                 }
 
             } while (validityEntry == false);
 
-
-
-
-
-
-
-
-
-
-
-        }    
+        }
+       
+           
     }
 }
