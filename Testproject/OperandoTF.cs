@@ -439,17 +439,17 @@ namespace Testproject
                 if (readResult == "Administrator")
                 {
                     validityEntry = true;
-                    Console.WriteLine($" Your input value {readResult.ToLower()} {readResult.Trim()} has been accepted.");
+                    Console.WriteLine($" Your input value {readResult.ToLower() == readResult.Trim()} has been accepted.");
                 }
                 else if (readResult == "User")
                 {
                     validityEntry = true;
-                    Console.WriteLine($" Your input value {readResult.ToLower()} {readResult.Trim()}has been accepted.");
+                    Console.WriteLine($" Your input value {readResult.ToLower() == readResult.Trim()}has been accepted.");
                 }
                 else if (readResult == "Manager")
                 {
                     validityEntry = true;
-                    Console.WriteLine($" Your input value {readResult.ToLower()} {readResult.Trim()}has been accepted.");
+                    Console.WriteLine($" Your input value {readResult.ToLower() == readResult.Trim()}has been accepted.");
                 }
                 else
                 {
